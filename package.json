@@ -1,0 +1,29 @@
+{
+  "name": "messenger",
+  "version": "1.0.3",
+  "description": "5G-VICTORI media cache prefilling solution. Messaging client for inter-service communication via the message broker service",
+  "author": "Christoph Ziegler",
+  "main": "dist/messenger.js",
+  "scripts": {
+    "build": "npx tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "message",
+    "streamer",
+    "broker",
+    "micro",
+    "service"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@nestjs/common": "^7.0.2",
+    "node-nats-streaming": "^0.2.6",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^13.9.1",
+    "typescript": "^3.8.3"
+  }
+}

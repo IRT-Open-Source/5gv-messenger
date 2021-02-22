@@ -1,0 +1,5 @@
+node_modules
+# dist folder should not be part pushed into git repo.
+# However issues wrt the typescript build in NPM post-install
+# script hook did not work our smoothly so we keep it for now.
+#dist
