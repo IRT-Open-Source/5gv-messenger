@@ -23,10 +23,10 @@ class Messenger {
     async connect() {
         return new Promise((resolve) => {
             this.stan = STAN.connect(this.MS_CLUSTER_NAME, this.clientId, {
-                url: 'nats://message-broker:4222'
+                url: 'nats://5gv-message-broker:4222'
             });
             this.stan.on('connect', () => {
-                this.logger.log(`Connected to message-broker service: cluster'${this.MS_CLUSTER_NAME}', client-ID ${this.clientId}`);
+                this.logger.log(`Connected to 5gv-message-broker service: cluster'${this.MS_CLUSTER_NAME}', client-ID ${this.clientId}`);
                 resolve();
             });
         });
