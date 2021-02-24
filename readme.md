@@ -60,7 +60,7 @@ class ExampleProvider implements OnModuleDestroy {
 Run:
 
 ```bash
-$ npm i -S git+ssh://git@gitlab.irt.de/5g-victori/messenger.git
+$ npm i -S git+https://git@github.com/IRT-Open-Source/5gv-messenger.git
 ```
 
 **Build**:
@@ -83,4 +83,4 @@ $ npx tsc
 
 ### Build on NPM postinstall
 
-Currently, the scripts in directory `/dist` are built from the sources using the typscript compiler `tsc` and checked into the git repository. This is considered to be a bad style. For one it creates unnecessary overhead (memory + files to track). Much more important, it is not obvious if the files in `/dist` correspond to the current development status of the sources -- no single source of truth. Actually, the files in `/dist` should be built after the installation via NPM at the user's site, for example by a [postinstall](https://docs.npmjs.com/cli/v6/using-npm/scripts) script defined in the `package.json`. However, this approach could not be implemented successfully so far. In consuming services, errors were encountered during build of the docker images when NPM attempted to resolve the dependencies or to build the scripts. Future releases should address this gap.
+Currently, the scripts in directory `/dist` are built from the sources using the typscript compiler `tsc` and checked into the git repository. This is considered to be a bad style. For one it creates unnecessary overhead (memory + files to track). Much more important, it is not obvious if the files in `/dist` correspond to the current development status of the sources -- no single source of truth. Actually, the files in `/dist` should be built after the installation via NPM at the user's site, for example by a [postinstall](https://docs.npmjs.com/cli/v6/using-npm/scripts) script defined in the `package.json`. However, this approach could not be implemented successfully so far. In consuming services, errors were encountered during build of the docker images when NPM attempted to resolve the dependencies or to build the scripts.
